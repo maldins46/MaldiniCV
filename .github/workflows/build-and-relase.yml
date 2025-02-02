@@ -1,0 +1,45 @@
+name: Build and Release PDF
+
+on:
+  push:
+    tags:
+      - "v*.*.*" # Matches semantic versioning like v1.0.0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-lang-european
+
+      - name: Compile LaTeX to PDF
+        working-directory: src
+        run: pdflatex -interaction=nonstopmode -output-directory=.. cv-maldini.tex
+
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: cv-maldini-pdf
+          path: cv-maldini.pdf
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download PDF artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: cv-maldini-pdf
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Riccardo Maldini CV ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          files: cv-maldini.pdf
