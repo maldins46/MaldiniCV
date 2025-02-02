@@ -2,6 +2,8 @@
 
 This repository contains my CV written in LaTeX. A GitHub Action is set up to automatically generate a PDF and create a release whenever a new tag is pushed to the `main` branch.
 
+Find the latest PDF version of my CV [here](https://github.com/maldins46/MaldiniCV/releases/latest)!
+
 ## About the LaTex template
 
 I've not reinvented the wheel here, I've just borrowed a shiny one. The original template is [LuxSleek-CV 1.1](https://www.overleaf.com/latex/templates/luxsleek-cv/qbvbqmrzxwyj) from Andreï V. Kostyrka, University of Luxembourg. Huge credits to him!
