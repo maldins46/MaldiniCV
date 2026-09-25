@@ -41,17 +41,17 @@
 \usepackage{FiraSans}        % Change this to use any font, but keep it simple
 \renewcommand{\familydefault}{\sfdefault}
 
-\definecolor{cvblue}{HTML}{304263}
+\definecolor{cvaccent}{HTML}{1A1A1A}
 
 %%%%%%% USER COMMAND DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % These are the real workhorses of this template
 \newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that doesn’t got broken into lines
-\newcommand{\is}{\par\vskip.5ex plus .4ex} % Item spacing
-\newcommand{\smaller}[1]{{\small$\diamond$\ #1}}
+\newcommand{\is}{\par\vskip.2ex plus .15ex} % Item spacing
+\newcommand{\smaller}[1]{{\footnotesize$\diamond$\ #1}}
 \newcommand{\headleft}[1]{\vspace*{3ex}\textsc{\textbf{#1}}\par%
     \vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
-\newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
-     \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
+\newcommand{\headright}[1]{\vspace*{1.5ex}\textsc{\Large\color{cvaccent}#1}\par%
+     \vspace*{-1.6ex}{\color{cvaccent}\hrulefill}\par}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -66,10 +66,10 @@
 
 \begin{minipage}[t]{0.33\textwidth} %% Left column -- outer definition
 %  Left column -- top dark rectangle
-\colorbox{cvblue}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+\colorbox{cvaccent}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
 
 \vspace{-.2ex} % Eliminates the small gap
-\colorbox{cvblue!90}{\color{white}  %% LEFT BOX
+\colorbox{cvaccent!90}{\color{white}  %% LEFT BOX
 \kern0.09\textwidth\relax% Left margin provided explicitly
 \begin{minipage}[t][293mm][t]{0.82\textwidth}
 \raggedright
@@ -78,7 +78,7 @@
 \Large Riccardo \textbf{\textsc{Maldini}} \normalsize 
 
 % Centering without extra vertical spacing
-\null\hfill\includegraphics[width=0.50\textwidth]{profile.png}\hfill\null
+\null\hfill\includegraphics[width=0.50\textwidth]{profile.jpg}\hfill\null
 
 \vspace*{0.5ex} % Extra space after the picture
 
@@ -113,20 +113,27 @@ Proficient in applying SOLID principles and software design patterns to create s
 \end{minipage}% Right column
 \hskip2.5em% Left margin for the white area
 \begin{minipage}[t]{0.56\textwidth}
-\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+\setlength{\parskip}{0.4ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
 
 \vspace{2ex}
 
 \headright{Work Experience}
 
 
+\textsc{Application Engineer II}
+\dates{September 2026 - Now}\\
+at \textit{Mollie BV}, Milano (MI)
+\is
+
 \textsc{Application Engineer}
-\dates{September 2025 - Now}\\
-at \textit{Mollie BV}, Milano (MI)  
+\dates{September 2025 - August 2026}\\
+at \textit{Mollie BV}, Milano (MI)
 
-\smaller{Developed and engineered tools for the Sales department, as part of the RevOps Team. Details to be added.}
+\smaller{Member of the Revenue Operations Pricing Team. Developed tools to enable Sales to efficiently price company products, while optimising margins and streamlining pricing workflows.}
 
-\smaller{Stack: React, Spring Boot, MySQL. Technologies: GCP, Hubspot, Salesforce, JUnit, Mockito, gRPC.}\is
+\smaller{Supported the migration from Salesforce to HubSpot CRM, by porting existing pricing tools, and leveraging HubSpot's native SDK for seamless integration.}
+
+\smaller{Stack: Spring Boot, MySQL, Google Cloud Pub/Sub, BigQuery. Technologies: JUnit, React, GCP, Terraform, Datadog, Sentry, Lucid, GitLab, Claude Code.}\is
 
 \textsc{Software Engineer}
 \dates{June 2022 - August 2025}\\

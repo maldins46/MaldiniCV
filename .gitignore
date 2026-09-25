@@ -348,7 +348,7 @@ Temporary Items
 
 ### Project-specific ###
 # Generated PDF (built locally or by CI release workflow; never committed)
-/cv-maldini.pdf
+cv-maldini.pdf
 
 # Claude Code local runtime state
 .claude/
