@@ -345,3 +345,10 @@ Temporary Items
 *.icloud
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,latex
+
+### Project-specific ###
+# Generated PDF (built locally or by CI release workflow; never committed)
+/cv-maldini.pdf
+
+# Claude Code local runtime state
+.claude/
