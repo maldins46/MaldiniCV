@@ -29,18 +29,18 @@ I've not reinvented the wheel here, I've just borrowed a shiny one. The original
 ### 1. Clone the repository
 
 ```sh
-git clonehttps://github.com/maldins46/MaldiniCV.git
-cd your-cv-repo-folder
+git clone https://github.com/maldins46/MaldiniCV.git
+cd MaldiniCV
 ```
 
-### 2. Edit `main.tex`
+### 2. Edit `src/cv-maldini.tex`
 
 Modify the LaTeX file to update your CV content.
 
 ### 3. Commit and push changes
 
 ```sh
-git add cv-maldini.tex
+git add src/cv-maldini.tex
 git commit -m "Update CV"
 git push origin main
 ```
