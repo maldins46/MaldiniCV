@@ -7,7 +7,7 @@ Single-file LaTeX CV. Template: LuxSleek-CV 1.1 (credit in README.md). Not a sof
 ## Structure
 
 - `src/cv-maldini.tex` — all CV content and layout.
-- `src/profile.png` — photo asset.
+- `src/profile.jpg` — photo asset.
 - `.github/workflows/build-and-release.yml` — CI: on `vX.Y.Z` tag push, compiles the tex and publishes `cv-maldini.pdf` as a GitHub Release asset.
 - `.vscode/settings.json` — LaTeX Workshop build recipe, mirrors CI (`pdflatex -output-directory=..`, build on save).
 
